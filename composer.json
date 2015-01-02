@@ -1,0 +1,29 @@
+{
+    "name": "keikogi/web-application-template",
+    "description": "Silex Web Application Template (Core)",
+    "keywords": ["microframework"],
+    "license": "MIT",
+    "homepage": "http://levaminov.ru",
+    "authors": [
+        {
+            "name": "Leo Aminov",
+            "email": "leoderoko@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.3.3",
+        "silex/silex": "~1.2",
+        "twig/twig": ">=1.8,<2.0-dev",
+        "monolog/monolog": ">=1.0.0",
+        "symfony/validator": "~2.3",
+        "swiftmailer/swiftmailer": ">=4.1.2,<4.2-dev",
+        "symfony/yaml": "~2.6",
+        "symfony/config": "~2.6"
+    },
+    "autoload": {
+        "psr-0": {
+            "Keikogi\\Application\\": "src/"
+        }
+    }
+}
