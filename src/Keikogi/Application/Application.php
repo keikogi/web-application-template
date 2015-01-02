@@ -22,8 +22,8 @@ class Application
             new TwigServiceProvider(),
             array(
                 'twig.path' => array(
-                    __DIR__ . '/Views',
-                    ROOT_PATH . '/src/Views',
+                    __DIR__ . '/View',
+                    ROOT_PATH . '/src/View',
                 ),
                 'twig.class_path' => ROOT_PATH . '/vendor/Twig/lib',
                 'twig.options' => array(
