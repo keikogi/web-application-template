@@ -1,16 +1,35 @@
 Web Application Template based on Silex
 =======================================
 
-silex/silex: ~1.2
+Requirements
+------------
+PHP 5.3+
 
-twig/twig: >=1.8, <2.0-dev
+Installation
+------------
+Add this to a composer.json file:
+```
+"repositories": [
+    {
+        "type": "vcs",
+        "url": "https://github.com/keikogi/web-application-template"
+    }
+],
+"require": {
+    "keikogi/web-application-template": ">=1.0.0"
+}
+```
 
-monolog/monolog: >=1.0.0
+Usage
+-----
+```php
+define('WEB_PATH', __DIR__);
 
-symfony/validator: ~2.3
+define('ROOT_PATH', __DIR__ . '/..');
 
-swiftmailer/swiftmailer: >=4.1.2, <4.2-dev
+require_once __DIR__ . '/../vendor/autoload.php';
 
-symfony/yaml: ~2.6
+use Keikogi\Application\Application;
 
-symfony/config: ~2.6
+Application::run(array(), false);
+```
