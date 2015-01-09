@@ -31,5 +31,6 @@ require_once __DIR__ . '/../vendor/autoload.php';
 
 use Keikogi\Application\Application;
 
-Application::run(array(), false);
+$app = Application::get(array(), true);
+$app->run();
 ```
