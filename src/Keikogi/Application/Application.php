@@ -12,7 +12,7 @@ use Silex\Provider\MonologServiceProvider;
 
 class Application
 {
-    public static function run($options, $debug = true)
+    public static function get($options, $debug = true)
     {
         $app = new SilexApplication();
 
@@ -22,8 +22,8 @@ class Application
             new TwigServiceProvider(),
             array(
                 'twig.path' => array(
-                    __DIR__ . '/View',
                     ROOT_PATH . '/src/View',
+                    __DIR__ . '/View',
                 ),
                 'twig.class_path' => ROOT_PATH . '/vendor/Twig/lib',
                 'twig.options' => array(
@@ -67,6 +67,13 @@ class Application
             }
         );
 
-        return $app->run();
+        return $app;
+    }
+
+    public static function run($options, $debug = true)
+    {
+        $app = self::get($options, $debug = true);
+
+        $app->run();
     }
 }
